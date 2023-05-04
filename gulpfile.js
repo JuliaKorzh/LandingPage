@@ -19,7 +19,7 @@ function scripts(){
 }
 
 function styles() {
-   return src('app/scss/style.scss')  
+   return src('app/scss/*.scss')  
    .pipe(autoprefixer({overriderBrowserslist: ['last 10 version']}))                                             //находим фаил
    .pipe(concat('style.min.css'))
    .pipe(scss({outputStyle: 'compressed'}))                                  //применяем к нему gulp sass  и минимизируем
