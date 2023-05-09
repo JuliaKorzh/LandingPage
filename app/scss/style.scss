@@ -1,1 +1,122 @@
+$blue: #0093A1;
+$green: #B9C400;
+$dark: #262C27;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+body{
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark;
+    .wrapper{
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+}
+a{
+    text-decoration: none;
+    color: inherit;
+ }
+ h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+ }
+ ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+ img{
+    object-fit: cover;
+ }
+ .container{
+    max-width: 1230px;
+    padding: 0 1rem;
+    margin: 0 auto;
+ }
+
+ //_________________________header_______________
+ .header{
+    background-image: url(../images/dest/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 57px 0;
+        gap: 100px;
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-size: 20px;
+
+        .header__logo path{
+            transition: fill 0.3s ease;
+         &:hover {
+            fill: $blue;
+         }
+        }
+        .header__btn{
+            text-transform: uppercase;
+            background-color: $dark;
+            padding: 12px 70px;
+            border: none;
+            color: white;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: $green;
+                color: $dark;
+            }
+        }
+        .header__phone{
+        }
+    }
+    &__content{
+        min-height: calc(100vh - 160px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &-box{
+            max-width: 550px;
+            text-align: center;
+            margin-right: 30px;
+            color: white;
+            font-family: 'Comfortaa';
+            font-weight: 700;
+            .header__title{
+                font-size: 64px;
+                line-height: 71px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+            .header__text{
+                font-size: 24px;
+                line-height: 27px;
+                margin-bottom: 20px;
+            }
+        }
+        &-deco{
+            display: none;
+
+        }
+        &-deco--1{
+            display: none;
+        }
+        &-deco--2{
+            display: none;
+        }
+        &-deco--3{
+            display: none;
+        }
+    }
+ }

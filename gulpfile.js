@@ -41,7 +41,7 @@ function watching(){
    watch(['app/scss/style.scss'], styles)
    watch(['app/js/main.js'], scripts)
    watch(['app/images/src'], images)
-   watch(['app/**/*.html']).on('change', browserSync.reload)            // *:html  озгачает, что будут отслеживаться   изменения во всех html фаилах
+   watch(['app/*.html']).on('change', browserSync.reload)            // *:html  озгачает, что будут отслеживаться   изменения во всех html фаилах
 }
 
 function browsersync(){
