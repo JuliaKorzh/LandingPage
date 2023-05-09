@@ -15,12 +15,12 @@ body{
     font-size: 18px;
     line-height: 22px;
     color: $dark;
-    .wrapper{
-        min-height: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
+
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 a{
     text-decoration: none;
@@ -48,7 +48,39 @@ a{
     background-image: url(../images/dest/header-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100vh;
+    position: relative;
+    &::before{
+        background-image: url(../images/dest/header-decor.svg);
+        position: absolute;
+        content: "";
+        height: 456px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: translateY(48%);
+        z-index: 2;
+
+    }
+    &::after{
+        background-image: url(../images/dest/header-decor.svg);
+        position: absolute;
+        content: "";
+        height: 456px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: translateY(80%) rotate(180deg);
+        z-index: 3;
+
+    }
     &__top{
         display: flex;
         align-items: center;
@@ -85,6 +117,7 @@ a{
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        position: relative;
 
         &-box{
             max-width: 550px;
@@ -105,18 +138,35 @@ a{
                 margin-bottom: 20px;
             }
         }
-        /*&-deco{
-            display: none;
-
+        &-deco{
+            position: absolute;
+            bottom: 20px;
+            color: $blue;
         }
         &-deco--1{
-            display: none;
+            right: 145px;
+            bottom: 80px;
         }
+        
         &-deco--2{
-            display: none;
+            left: 265px;
+            z-index: 4;
+            bottom: -25px;
+        }
+        &-deco--1, &-deco--2{
+            font-size: 130px;
+            line-height: 145px;
+            opacity: 0.3;
         }
         &-deco--3{
-            display: none;
-        }*/
+            max-width: 360px;
+            right: 115px;
+            z-index: 4;
+            font-style: italic;
+            text-align: center;
+            font-size: 32px;
+            line-height: 39px;
+            bottom: -10px;
+        }
     }
  }
